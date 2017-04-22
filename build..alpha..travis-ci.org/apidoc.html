@@ -1,0 +1,1201 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/sindresorhus/execa#readme"
+
+    >execa (v0.6.3)</a>
+</h1>
+<h4>A better `child_process`</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.execa">module execa</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.execa.execa">
+            function <span class="apidocSignatureSpan"></span>execa
+            <span class="apidocSignatureSpan">(cmd, args, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.execa.errname">
+            function <span class="apidocSignatureSpan">execa.</span>errname
+            <span class="apidocSignatureSpan">(uv, code)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.execa.index">
+            function <span class="apidocSignatureSpan">execa.</span>index
+            <span class="apidocSignatureSpan">(cmd, args, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.execa.shell">
+            function <span class="apidocSignatureSpan">execa.</span>shell
+            <span class="apidocSignatureSpan">(cmd, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.execa.shellSync">
+            function <span class="apidocSignatureSpan">execa.</span>shellSync
+            <span class="apidocSignatureSpan">(cmd, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.execa.spawn">
+            function <span class="apidocSignatureSpan">execa.</span>spawn
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.execa.stderr">
+            function <span class="apidocSignatureSpan">execa.</span>stderr
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.execa.stdout">
+            function <span class="apidocSignatureSpan">execa.</span>stdout
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.execa.sync">
+            function <span class="apidocSignatureSpan">execa.</span>sync
+            <span class="apidocSignatureSpan">(cmd, args, opts)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.execa.errname">module execa.errname</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.execa.errname.errname">
+            function <span class="apidocSignatureSpan">execa.</span>errname
+            <span class="apidocSignatureSpan">(uv, code)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.execa.errname.__test__">
+            function <span class="apidocSignatureSpan">execa.errname.</span>__test__
+            <span class="apidocSignatureSpan">(uv, code)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.execa.index">module execa.index</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.execa.index.index">
+            function <span class="apidocSignatureSpan">execa.</span>index
+            <span class="apidocSignatureSpan">(cmd, args, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.execa.index.shell">
+            function <span class="apidocSignatureSpan">execa.index.</span>shell
+            <span class="apidocSignatureSpan">(cmd, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.execa.index.shellSync">
+            function <span class="apidocSignatureSpan">execa.index.</span>shellSync
+            <span class="apidocSignatureSpan">(cmd, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.execa.index.spawn">
+            function <span class="apidocSignatureSpan">execa.index.</span>spawn
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.execa.index.stderr">
+            function <span class="apidocSignatureSpan">execa.index.</span>stderr
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.execa.index.stdout">
+            function <span class="apidocSignatureSpan">execa.index.</span>stdout
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.execa.index.sync">
+            function <span class="apidocSignatureSpan">execa.index.</span>sync
+            <span class="apidocSignatureSpan">(cmd, args, opts)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.execa" id="apidoc.module.execa">module execa</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.execa.execa" id="apidoc.element.execa.execa">
+        function <span class="apidocSignatureSpan"></span>execa
+        <span class="apidocSignatureSpan">(cmd, args, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">(cmd, args, opts) =&#x3e; {
+	let joinedCmd = cmd;
+
+	if (Array.isArray(args) &#x26;&#x26; args.length &#x3e; 0) {
+		joinedCmd += &#x27; &#x27; + args.join(&#x27; &#x27;);
+	}
+
+	const parsed = handleArgs(cmd, args, opts);
+	const encoding = parsed.opts.encoding;
+	const maxBuffer = parsed.opts.maxBuffer;
+
+	let spawned;
+	try {
+		spawned = childProcess.spawn(parsed.cmd, parsed.args, parsed.opts);
+	} catch (err) {
+		return Promise.reject(err);
+	}
+
+	let removeExitHandler;
+	if (parsed.opts.cleanup) {
+		removeExitHandler = onExit(() =&#x3e; {
+			spawned.kill();
+		});
+	}
+
+	let timeoutId = null;
+	let timedOut = false;
+
+	const cleanupTimeout = () =&#x3e; {
+		if (timeoutId) {
+			clearTimeout(timeoutId);
+			timeoutId = null;
+		}
+	};
+
+	if (parsed.opts.timeout &#x3e; 0) {
+		timeoutId = setTimeout(() =&#x3e; {
+			timeoutId = null;
+			timedOut = true;
+			spawned.kill(parsed.killSignal);
+		}, parsed.opts.timeout);
+	}
+
+	const processDone = new Promise(resolve =&#x3e; {
+		spawned.on(&#x27;exit&#x27;, (code, signal) =&#x3e; {
+			cleanupTimeout();
+			resolve({code, signal});
+		});
+
+		spawned.on(&#x27;error&#x27;, err =&#x3e; {
+			cleanupTimeout();
+			resolve({err});
+		});
+
+		if (spawned.stdin) {
+			spawned.stdin.on(&#x27;error&#x27;, err =&#x3e; {
+				cleanupTimeout();
+				resolve({err});
+			});
+		}
+	});
+
+	function destroy() {
+		if (spawned.stdout) {
+			spawned.stdout.destroy();
+		}
+
+		if (spawned.stderr) {
+			spawned.stderr.destroy();
+		}
+	}
+
+	const promise = pFinally(Promise.all([
+		processDone,
+		getStream(spawned, &#x27;stdout&#x27;, encoding, maxBuffer),
+		getStream(spawned, &#x27;stderr&#x27;, encoding, maxBuffer)
+	]).then(arr =&#x3e; {
+		const result = arr[0];
+		const stdout = arr[1];
+		const stderr = arr[2];
+
+		let err = result.err;
+		const code = result.code;
+		const signal = result.signal;
+
+		if (removeExitHandler) {
+			removeExitHandler();
+		}
+
+		if (err || code !== 0 || signal !== null) {
+			if (!err) {
+				const output = parsed.opts.stdio === &#x27;inherit&#x27; ? &#x27;&#x27; : `\n${stderr}${stdout}`;
+				err = new Error(`Command failed: ${joinedCmd}${output}`);
+				err.code = code &#x3c; 0 ? errname(code) : code;
+			}
+
+			// TODO: missing some timeout logic for killed
+			// https://github.com/nodejs/node/blob/master/lib/child_process.js#L203
+			// err.killed = spawned.killed || killed;
+			err.killed = err.killed || spawned.killed;
+
+			err.stdout = stdout;
+			err.stderr = stderr;
+			err.failed = true;
+			err.signal = signal || null;
+			err.cmd = joinedCmd;
+			err.timedOut = timedOut;
+
+			if (!parsed.opts.reject) {
+				return err;
+			}
+
+			throw err;
+		}
+
+		return {
+			stdout: handleOutput(parsed.opts, stdout),
+			stderr: handleOutput(parsed.opts, stderr),
+			code: 0,
+			failed: false,
+			killed: false,
+			signal: null,
+			cmd: joinedCmd,
+			timedOut: false
+		};
+	}), destroy);
+
+	crossSpawn._enoent.hookChildProcess(spawned, parsed.parsed);
+
+	handleInput(spawned, parsed.opts);
+
+	spawned.then = promise.then.bind(promise);
+	spawned.catch = promise.catch.bind(promise);
+
+	return spawned;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.execa.errname" id="apidoc.element.execa.errname">
+        function <span class="apidocSignatureSpan">execa.</span>errname
+        <span class="apidocSignatureSpan">(uv, code)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">code =&#x3e; errname(uv, code)</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+} catch (err) {
+	console.error(&#x27;execa/lib/errname: unable to establish process.binding(\&#x27;uv\&#x27;)&#x27;, err);
+	uv = null;
+}
+
+function errname(uv, code) {
+	if (uv) {
+		return uv.<span class="apidocCodeKeywordSpan">errname</span>(code);
+	}
+
+	if (!(code &#x3c; 0)) {
+		throw new Error(&#x27;err &#x3e;= 0&#x27;);
+	}
+
+	return `Unknown system error ${code}`;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.execa.index" id="apidoc.element.execa.index">
+        function <span class="apidocSignatureSpan">execa.</span>index
+        <span class="apidocSignatureSpan">(cmd, args, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">(cmd, args, opts) =&#x3e; {
+	let joinedCmd = cmd;
+
+	if (Array.isArray(args) &#x26;&#x26; args.length &#x3e; 0) {
+		joinedCmd += &#x27; &#x27; + args.join(&#x27; &#x27;);
+	}
+
+	const parsed = handleArgs(cmd, args, opts);
+	const encoding = parsed.opts.encoding;
+	const maxBuffer = parsed.opts.maxBuffer;
+
+	let spawned;
+	try {
+		spawned = childProcess.spawn(parsed.cmd, parsed.args, parsed.opts);
+	} catch (err) {
+		return Promise.reject(err);
+	}
+
+	let removeExitHandler;
+	if (parsed.opts.cleanup) {
+		removeExitHandler = onExit(() =&#x3e; {
+			spawned.kill();
+		});
+	}
+
+	let timeoutId = null;
+	let timedOut = false;
+
+	const cleanupTimeout = () =&#x3e; {
+		if (timeoutId) {
+			clearTimeout(timeoutId);
+			timeoutId = null;
+		}
+	};
+
+	if (parsed.opts.timeout &#x3e; 0) {
+		timeoutId = setTimeout(() =&#x3e; {
+			timeoutId = null;
+			timedOut = true;
+			spawned.kill(parsed.killSignal);
+		}, parsed.opts.timeout);
+	}
+
+	const processDone = new Promise(resolve =&#x3e; {
+		spawned.on(&#x27;exit&#x27;, (code, signal) =&#x3e; {
+			cleanupTimeout();
+			resolve({code, signal});
+		});
+
+		spawned.on(&#x27;error&#x27;, err =&#x3e; {
+			cleanupTimeout();
+			resolve({err});
+		});
+
+		if (spawned.stdin) {
+			spawned.stdin.on(&#x27;error&#x27;, err =&#x3e; {
+				cleanupTimeout();
+				resolve({err});
+			});
+		}
+	});
+
+	function destroy() {
+		if (spawned.stdout) {
+			spawned.stdout.destroy();
+		}
+
+		if (spawned.stderr) {
+			spawned.stderr.destroy();
+		}
+	}
+
+	const promise = pFinally(Promise.all([
+		processDone,
+		getStream(spawned, &#x27;stdout&#x27;, encoding, maxBuffer),
+		getStream(spawned, &#x27;stderr&#x27;, encoding, maxBuffer)
+	]).then(arr =&#x3e; {
+		const result = arr[0];
+		const stdout = arr[1];
+		const stderr = arr[2];
+
+		let err = result.err;
+		const code = result.code;
+		const signal = result.signal;
+
+		if (removeExitHandler) {
+			removeExitHandler();
+		}
+
+		if (err || code !== 0 || signal !== null) {
+			if (!err) {
+				const output = parsed.opts.stdio === &#x27;inherit&#x27; ? &#x27;&#x27; : `\n${stderr}${stdout}`;
+				err = new Error(`Command failed: ${joinedCmd}${output}`);
+				err.code = code &#x3c; 0 ? errname(code) : code;
+			}
+
+			// TODO: missing some timeout logic for killed
+			// https://github.com/nodejs/node/blob/master/lib/child_process.js#L203
+			// err.killed = spawned.killed || killed;
+			err.killed = err.killed || spawned.killed;
+
+			err.stdout = stdout;
+			err.stderr = stderr;
+			err.failed = true;
+			err.signal = signal || null;
+			err.cmd = joinedCmd;
+			err.timedOut = timedOut;
+
+			if (!parsed.opts.reject) {
+				return err;
+			}
+
+			throw err;
+		}
+
+		return {
+			stdout: handleOutput(parsed.opts, stdout),
+			stderr: handleOutput(parsed.opts, stderr),
+			code: 0,
+			failed: false,
+			killed: false,
+			signal: null,
+			cmd: joinedCmd,
+			timedOut: false
+		};
+	}), destroy);
+
+	crossSpawn._enoent.hookChildProcess(spawned, parsed.parsed);
+
+	handleInput(spawned, parsed.opts);
+
+	spawned.then = promise.then.bind(promise);
+	spawned.catch = promise.catch.bind(promise);
+
+	return spawned;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.execa.shell" id="apidoc.element.execa.shell">
+        function <span class="apidocSignatureSpan">execa.</span>shell
+        <span class="apidocSignatureSpan">(cmd, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">(cmd, opts) =&#x3e; handleShell(module.exports, cmd, opts)</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	console.log(result.stdout);
+	//=&#x3e; &#x27;unicorns&#x27;
+});
+
+// pipe the child process stdout to the current stdout
+execa(&#x27;echo&#x27;, [&#x27;unicorns&#x27;]).stdout.pipe(process.stdout);
+
+execa.<span class="apidocCodeKeywordSpan">shell</span>(&#x27;echo unicorns&#x27;).then(result =&#x3e; {
+	console.log(result.stdout);
+	//=&#x3e; &#x27;unicorns&#x27;
+});
+
+// example of catching an error
+execa.shell(&#x27;exit 3&#x27;).catch(error =&#x3e; {
+	console.log(error);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.execa.shellSync" id="apidoc.element.execa.shellSync">
+        function <span class="apidocSignatureSpan">execa.</span>shellSync
+        <span class="apidocSignatureSpan">(cmd, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">(cmd, opts) =&#x3e; handleShell(module.exports.sync, cmd, opts)</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Same options as [`child_process.spawnSync`](https://nodejs.org/api/child_process.html#child_process_child_process_spawnsync_command_args_options
+), except the default encoding is `utf8` instead of `buffer`.
+
+Returns the same result object as [`child_process.spawnSync`](https://nodejs.org/api/child_process.html#child_process_child_process_spawnsync_command_args_options
+).
+
+This method throws an `Error` if the command fails.
+
+### execa.<span class="apidocCodeKeywordSpan">shellSync</span>(file, [options])
+
+Execute a command synchronously through the system shell.
+
+Same options as [`child_process.spawnSync`](https://nodejs.org/api/child_process.html#child_process_child_process_spawnsync_command_args_options
+), except the default encoding is `utf8` instead of `buffer`.
+
+Returns the same result object as [`child_process.spawnSync`](https://nodejs.org/api/child_process.html#child_process_child_process_spawnsync_command_args_options
+).
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.execa.spawn" id="apidoc.element.execa.spawn">
+        function <span class="apidocSignatureSpan">execa.</span>spawn
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function deprecated() {
+  warned = exports.printDeprecationMessage(msg, warned, deprecated);
+  if (new.target) {
+    return Reflect.construct(fn, arguments, new.target);
+  }
+  return fn.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+	const parsed = handleArgs(cmd, args, opts);
+	const encoding = parsed.opts.encoding;
+	const maxBuffer = parsed.opts.maxBuffer;
+
+	let spawned;
+	try {
+		spawned = childProcess.<span class="apidocCodeKeywordSpan">spawn</span>(parsed.cmd, parsed.args, parsed.opts);
+	} catch (err) {
+		return Promise.reject(err);
+	}
+
+	let removeExitHandler;
+	if (parsed.opts.cleanup) {
+		removeExitHandler = onExit(() =&#x3e; {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.execa.stderr" id="apidoc.element.execa.stderr">
+        function <span class="apidocSignatureSpan">execa.</span>stderr
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stderr = function () {
+	// TODO: set `stdout: &#x27;ignore&#x27;` when that option is implemented
+	return module.exports.apply(null, arguments).then(x =&#x3e; x.stderr);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Returns a [`child_process` instance](https://nodejs.org/api/child_process.html#child_process_class_childprocess), which is enhanced
+ to also be a `Promise` for a result `Object` with `stdout` and `stderr` properties.
+
+### execa.stdout(file, [arguments], [options])
+
+Same as `execa()`, but returns only `stdout`.
+
+### execa.<span class="apidocCodeKeywordSpan">stderr</span>(file, [arguments], [options])
+
+Same as `execa()`, but returns only `stderr`.
+
+### execa.shell(command, [options])
+
+Execute a command through the system shell. Prefer `execa()` whenever possible, as it&#x27;s both faster and safer.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.execa.stdout" id="apidoc.element.execa.stdout">
+        function <span class="apidocSignatureSpan">execa.</span>stdout
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stdout = function () {
+	// TODO: set `stderr: &#x27;ignore&#x27;` when that option is implemented
+	return module.exports.apply(null, arguments).then(x =&#x3e; x.stdout);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Same options as [`child_process.spawn`](https://nodejs.org/api/child_process.html#child_process_child_process_spawn_command_args_options
+).
+
+Think of this as a mix of `child_process.execFile` and `child_process.spawn`.
+
+Returns a [`child_process` instance](https://nodejs.org/api/child_process.html#child_process_class_childprocess), which is enhanced
+ to also be a `Promise` for a result `Object` with `stdout` and `stderr` properties.
+
+### execa.<span class="apidocCodeKeywordSpan">stdout</span>(file, [arguments], [options])
+
+Same as `execa()`, but returns only `stdout`.
+
+### execa.stderr(file, [arguments], [options])
+
+Same as `execa()`, but returns only `stderr`.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.execa.sync" id="apidoc.element.execa.sync">
+        function <span class="apidocSignatureSpan">execa.</span>sync
+        <span class="apidocSignatureSpan">(cmd, args, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">(cmd, args, opts) =&#x3e; {
+	const parsed = handleArgs(cmd, args, opts);
+
+	if (isStream(parsed.opts.input)) {
+		throw new TypeError(&#x27;The `input` option cannot be a stream in sync mode&#x27;);
+	}
+
+	const result = childProcess.spawnSync(parsed.cmd, parsed.args, parsed.opts);
+
+	if (result.error || result.status !== 0) {
+		throw (result.error || new Error(result.stderr === &#x27;&#x27; ? result.stdout : result.stderr));
+	}
+
+	result.stdout = handleOutput(parsed.opts, result.stdout);
+	result.stderr = handleOutput(parsed.opts, result.stderr);
+
+	return result;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Same options as [`child_process.spawn`](https://nodejs.org/api/child_process.html#child_process_child_process_spawn_command_args_options
+).
+
+Returns a [`child_process` instance](https://nodejs.org/api/child_process.html#child_process_class_childprocess).
+
+The `child_process` instance is enhanced to also be promise for a result object with `stdout` and `stderr` properties.
+
+### execa.<span class="apidocCodeKeywordSpan">sync</span>(file, [arguments], [options])
+
+Execute a file synchronously.
+
+Same options as [`child_process.spawnSync`](https://nodejs.org/api/child_process.html#child_process_child_process_spawnsync_command_args_options
+), except the default encoding is `utf8` instead of `buffer`.
+
+Returns the same result object as [`child_process.spawnSync`](https://nodejs.org/api/child_process.html#child_process_child_process_spawnsync_command_args_options
+).
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.execa.errname" id="apidoc.module.execa.errname">module execa.errname</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.execa.errname.errname" id="apidoc.element.execa.errname.errname">
+        function <span class="apidocSignatureSpan">execa.</span>errname
+        <span class="apidocSignatureSpan">(uv, code)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">code =&#x3e; errname(uv, code)</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+} catch (err) {
+	console.error(&#x27;execa/lib/errname: unable to establish process.binding(\&#x27;uv\&#x27;)&#x27;, err);
+	uv = null;
+}
+
+function errname(uv, code) {
+	if (uv) {
+		return uv.<span class="apidocCodeKeywordSpan">errname</span>(code);
+	}
+
+	if (!(code &#x3c; 0)) {
+		throw new Error(&#x27;err &#x3e;= 0&#x27;);
+	}
+
+	return `Unknown system error ${code}`;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.execa.errname.__test__" id="apidoc.element.execa.errname.__test__">
+        function <span class="apidocSignatureSpan">execa.errname.</span>__test__
+        <span class="apidocSignatureSpan">(uv, code)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function errname(uv, code) {
+	if (uv) {
+		return uv.errname(code);
+	}
+
+	if (!(code &#x3c; 0)) {
+		throw new Error(&#x27;err &#x3e;= 0&#x27;);
+	}
+
+	return `Unknown system error ${code}`;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.execa.index" id="apidoc.module.execa.index">module execa.index</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.execa.index.index" id="apidoc.element.execa.index.index">
+        function <span class="apidocSignatureSpan">execa.</span>index
+        <span class="apidocSignatureSpan">(cmd, args, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">(cmd, args, opts) =&#x3e; {
+	let joinedCmd = cmd;
+
+	if (Array.isArray(args) &#x26;&#x26; args.length &#x3e; 0) {
+		joinedCmd += &#x27; &#x27; + args.join(&#x27; &#x27;);
+	}
+
+	const parsed = handleArgs(cmd, args, opts);
+	const encoding = parsed.opts.encoding;
+	const maxBuffer = parsed.opts.maxBuffer;
+
+	let spawned;
+	try {
+		spawned = childProcess.spawn(parsed.cmd, parsed.args, parsed.opts);
+	} catch (err) {
+		return Promise.reject(err);
+	}
+
+	let removeExitHandler;
+	if (parsed.opts.cleanup) {
+		removeExitHandler = onExit(() =&#x3e; {
+			spawned.kill();
+		});
+	}
+
+	let timeoutId = null;
+	let timedOut = false;
+
+	const cleanupTimeout = () =&#x3e; {
+		if (timeoutId) {
+			clearTimeout(timeoutId);
+			timeoutId = null;
+		}
+	};
+
+	if (parsed.opts.timeout &#x3e; 0) {
+		timeoutId = setTimeout(() =&#x3e; {
+			timeoutId = null;
+			timedOut = true;
+			spawned.kill(parsed.killSignal);
+		}, parsed.opts.timeout);
+	}
+
+	const processDone = new Promise(resolve =&#x3e; {
+		spawned.on(&#x27;exit&#x27;, (code, signal) =&#x3e; {
+			cleanupTimeout();
+			resolve({code, signal});
+		});
+
+		spawned.on(&#x27;error&#x27;, err =&#x3e; {
+			cleanupTimeout();
+			resolve({err});
+		});
+
+		if (spawned.stdin) {
+			spawned.stdin.on(&#x27;error&#x27;, err =&#x3e; {
+				cleanupTimeout();
+				resolve({err});
+			});
+		}
+	});
+
+	function destroy() {
+		if (spawned.stdout) {
+			spawned.stdout.destroy();
+		}
+
+		if (spawned.stderr) {
+			spawned.stderr.destroy();
+		}
+	}
+
+	const promise = pFinally(Promise.all([
+		processDone,
+		getStream(spawned, &#x27;stdout&#x27;, encoding, maxBuffer),
+		getStream(spawned, &#x27;stderr&#x27;, encoding, maxBuffer)
+	]).then(arr =&#x3e; {
+		const result = arr[0];
+		const stdout = arr[1];
+		const stderr = arr[2];
+
+		let err = result.err;
+		const code = result.code;
+		const signal = result.signal;
+
+		if (removeExitHandler) {
+			removeExitHandler();
+		}
+
+		if (err || code !== 0 || signal !== null) {
+			if (!err) {
+				const output = parsed.opts.stdio === &#x27;inherit&#x27; ? &#x27;&#x27; : `\n${stderr}${stdout}`;
+				err = new Error(`Command failed: ${joinedCmd}${output}`);
+				err.code = code &#x3c; 0 ? errname(code) : code;
+			}
+
+			// TODO: missing some timeout logic for killed
+			// https://github.com/nodejs/node/blob/master/lib/child_process.js#L203
+			// err.killed = spawned.killed || killed;
+			err.killed = err.killed || spawned.killed;
+
+			err.stdout = stdout;
+			err.stderr = stderr;
+			err.failed = true;
+			err.signal = signal || null;
+			err.cmd = joinedCmd;
+			err.timedOut = timedOut;
+
+			if (!parsed.opts.reject) {
+				return err;
+			}
+
+			throw err;
+		}
+
+		return {
+			stdout: handleOutput(parsed.opts, stdout),
+			stderr: handleOutput(parsed.opts, stderr),
+			code: 0,
+			failed: false,
+			killed: false,
+			signal: null,
+			cmd: joinedCmd,
+			timedOut: false
+		};
+	}), destroy);
+
+	crossSpawn._enoent.hookChildProcess(spawned, parsed.parsed);
+
+	handleInput(spawned, parsed.opts);
+
+	spawned.then = promise.then.bind(promise);
+	spawned.catch = promise.catch.bind(promise);
+
+	return spawned;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.execa.index.shell" id="apidoc.element.execa.index.shell">
+        function <span class="apidocSignatureSpan">execa.index.</span>shell
+        <span class="apidocSignatureSpan">(cmd, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">(cmd, opts) =&#x3e; handleShell(module.exports, cmd, opts)</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	console.log(result.stdout);
+	//=&#x3e; &#x27;unicorns&#x27;
+});
+
+// pipe the child process stdout to the current stdout
+execa(&#x27;echo&#x27;, [&#x27;unicorns&#x27;]).stdout.pipe(process.stdout);
+
+execa.<span class="apidocCodeKeywordSpan">shell</span>(&#x27;echo unicorns&#x27;).then(result =&#x3e; {
+	console.log(result.stdout);
+	//=&#x3e; &#x27;unicorns&#x27;
+});
+
+// example of catching an error
+execa.shell(&#x27;exit 3&#x27;).catch(error =&#x3e; {
+	console.log(error);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.execa.index.shellSync" id="apidoc.element.execa.index.shellSync">
+        function <span class="apidocSignatureSpan">execa.index.</span>shellSync
+        <span class="apidocSignatureSpan">(cmd, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">(cmd, opts) =&#x3e; handleShell(module.exports.sync, cmd, opts)</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Same options as [`child_process.spawnSync`](https://nodejs.org/api/child_process.html#child_process_child_process_spawnsync_command_args_options
+), except the default encoding is `utf8` instead of `buffer`.
+
+Returns the same result object as [`child_process.spawnSync`](https://nodejs.org/api/child_process.html#child_process_child_process_spawnsync_command_args_options
+).
+
+This method throws an `Error` if the command fails.
+
+### execa.<span class="apidocCodeKeywordSpan">shellSync</span>(file, [options])
+
+Execute a command synchronously through the system shell.
+
+Same options as [`child_process.spawnSync`](https://nodejs.org/api/child_process.html#child_process_child_process_spawnsync_command_args_options
+), except the default encoding is `utf8` instead of `buffer`.
+
+Returns the same result object as [`child_process.spawnSync`](https://nodejs.org/api/child_process.html#child_process_child_process_spawnsync_command_args_options
+).
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.execa.index.spawn" id="apidoc.element.execa.index.spawn">
+        function <span class="apidocSignatureSpan">execa.index.</span>spawn
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function deprecated() {
+  warned = exports.printDeprecationMessage(msg, warned, deprecated);
+  if (new.target) {
+    return Reflect.construct(fn, arguments, new.target);
+  }
+  return fn.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+	const parsed = handleArgs(cmd, args, opts);
+	const encoding = parsed.opts.encoding;
+	const maxBuffer = parsed.opts.maxBuffer;
+
+	let spawned;
+	try {
+		spawned = childProcess.<span class="apidocCodeKeywordSpan">spawn</span>(parsed.cmd, parsed.args, parsed.opts);
+	} catch (err) {
+		return Promise.reject(err);
+	}
+
+	let removeExitHandler;
+	if (parsed.opts.cleanup) {
+		removeExitHandler = onExit(() =&#x3e; {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.execa.index.stderr" id="apidoc.element.execa.index.stderr">
+        function <span class="apidocSignatureSpan">execa.index.</span>stderr
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stderr = function () {
+	// TODO: set `stdout: &#x27;ignore&#x27;` when that option is implemented
+	return module.exports.apply(null, arguments).then(x =&#x3e; x.stderr);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Returns a [`child_process` instance](https://nodejs.org/api/child_process.html#child_process_class_childprocess), which is enhanced
+ to also be a `Promise` for a result `Object` with `stdout` and `stderr` properties.
+
+### execa.stdout(file, [arguments], [options])
+
+Same as `execa()`, but returns only `stdout`.
+
+### execa.<span class="apidocCodeKeywordSpan">stderr</span>(file, [arguments], [options])
+
+Same as `execa()`, but returns only `stderr`.
+
+### execa.shell(command, [options])
+
+Execute a command through the system shell. Prefer `execa()` whenever possible, as it&#x27;s both faster and safer.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.execa.index.stdout" id="apidoc.element.execa.index.stdout">
+        function <span class="apidocSignatureSpan">execa.index.</span>stdout
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stdout = function () {
+	// TODO: set `stderr: &#x27;ignore&#x27;` when that option is implemented
+	return module.exports.apply(null, arguments).then(x =&#x3e; x.stdout);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Same options as [`child_process.spawn`](https://nodejs.org/api/child_process.html#child_process_child_process_spawn_command_args_options
+).
+
+Think of this as a mix of `child_process.execFile` and `child_process.spawn`.
+
+Returns a [`child_process` instance](https://nodejs.org/api/child_process.html#child_process_class_childprocess), which is enhanced
+ to also be a `Promise` for a result `Object` with `stdout` and `stderr` properties.
+
+### execa.<span class="apidocCodeKeywordSpan">stdout</span>(file, [arguments], [options])
+
+Same as `execa()`, but returns only `stdout`.
+
+### execa.stderr(file, [arguments], [options])
+
+Same as `execa()`, but returns only `stderr`.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.execa.index.sync" id="apidoc.element.execa.index.sync">
+        function <span class="apidocSignatureSpan">execa.index.</span>sync
+        <span class="apidocSignatureSpan">(cmd, args, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">(cmd, args, opts) =&#x3e; {
+	const parsed = handleArgs(cmd, args, opts);
+
+	if (isStream(parsed.opts.input)) {
+		throw new TypeError(&#x27;The `input` option cannot be a stream in sync mode&#x27;);
+	}
+
+	const result = childProcess.spawnSync(parsed.cmd, parsed.args, parsed.opts);
+
+	if (result.error || result.status !== 0) {
+		throw (result.error || new Error(result.stderr === &#x27;&#x27; ? result.stdout : result.stderr));
+	}
+
+	result.stdout = handleOutput(parsed.opts, result.stdout);
+	result.stderr = handleOutput(parsed.opts, result.stderr);
+
+	return result;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Same options as [`child_process.spawn`](https://nodejs.org/api/child_process.html#child_process_child_process_spawn_command_args_options
+).
+
+Returns a [`child_process` instance](https://nodejs.org/api/child_process.html#child_process_class_childprocess).
+
+The `child_process` instance is enhanced to also be promise for a result object with `stdout` and `stderr` properties.
+
+### execa.<span class="apidocCodeKeywordSpan">sync</span>(file, [arguments], [options])
+
+Execute a file synchronously.
+
+Same options as [`child_process.spawnSync`](https://nodejs.org/api/child_process.html#child_process_child_process_spawnsync_command_args_options
+), except the default encoding is `utf8` instead of `buffer`.
+
+Returns the same result object as [`child_process.spawnSync`](https://nodejs.org/api/child_process.html#child_process_child_process_spawnsync_command_args_options
+).
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
